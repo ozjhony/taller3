@@ -14,3 +14,8 @@ pages:
     title: Página principal
     source: docs/index.md
     permalink: /
+
+    - path: /test
+    title: Página principal
+    source: docs/index.md
+    permalink: /
