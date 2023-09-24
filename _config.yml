@@ -1,1 +1,4 @@
-markdown: kramdown
+format: jb-book
+root: Taller_3
+
+- file: Taller_3
