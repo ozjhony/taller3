@@ -1,0 +1,29 @@
+<html>
+<div id="markdown-content"></div>
+
+</html>
+
+<script>
+    // Función para cargar y renderizar el contenido Markdown
+    function loadMarkdown() {
+        // Ruta al archivo Markdown (ajusta la ruta según tu repositorio)
+        var markdownPath = 'taller_3.md';
+
+        // Realiza una solicitud para cargar el archivo Markdown
+        fetch(markdownPath)
+            .then(response => response.text())
+            .then(markdownText => {
+                // Utiliza marked.js para convertir el Markdown a HTML
+                var htmlContent = marked(markdownText);
+
+                // Muestra el contenido HTML generado en el div deseado
+                document.getElementById("markdown-content").innerHTML = htmlContent;
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo Markdown:', error);
+            });
+    }
+
+    // Llama a la función para cargar y renderizar el Markdown cuando la página se carga
+    window.addEventListener('load', loadMarkdown);
+</script>
